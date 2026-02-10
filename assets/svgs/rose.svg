@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <linearGradient id="roseGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF6B9D"/>
+      <stop offset="100%" style="stop-color:#E91E63"/>
+    </linearGradient>
+  </defs>
+  <g fill="url(#roseGrad)">
+    <!-- Center -->
+    <ellipse cx="50" cy="50" rx="8" ry="10" transform="rotate(0 50 50)"/>
+    <!-- Petals -->
+    <ellipse cx="50" cy="35" rx="12" ry="18" transform="rotate(0 50 50)"/>
+    <ellipse cx="65" cy="45" rx="12" ry="18" transform="rotate(72 50 50)"/>
+    <ellipse cx="60" cy="65" rx="12" ry="18" transform="rotate(144 50 50)"/>
+    <ellipse cx="40" cy="65" rx="12" ry="18" transform="rotate(216 50 50)"/>
+    <ellipse cx="35" cy="45" rx="12" ry="18" transform="rotate(288 50 50)"/>
+  </g>
+  <!-- Stem -->
+  <path d="M50 70 Q48 85 50 95" stroke="#2E7D32" stroke-width="3" fill="none"/>
+  <path d="M50 80 Q40 75 35 80" stroke="#2E7D32" stroke-width="2" fill="none"/>
+</svg>

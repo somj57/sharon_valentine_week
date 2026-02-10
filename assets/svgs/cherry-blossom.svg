@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <linearGradient id="sakuraGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFEEF8"/>
+      <stop offset="50%" style="stop-color:#FFB7D5"/>
+      <stop offset="100%" style="stop-color:#FF8DC0"/>
+    </linearGradient>
+    <radialGradient id="centerGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#FFE066"/>
+      <stop offset="100%" style="stop-color:#FFCC00"/>
+    </radialGradient>
+  </defs>
+  <!-- Cherry blossom petals -->
+  <ellipse cx="50" cy="25" rx="12" ry="20" fill="url(#sakuraGrad)" transform="rotate(0 50 50)"/>
+  <ellipse cx="50" cy="25" rx="12" ry="20" fill="url(#sakuraGrad)" transform="rotate(72 50 50)"/>
+  <ellipse cx="50" cy="25" rx="12" ry="20" fill="url(#sakuraGrad)" transform="rotate(144 50 50)"/>
+  <ellipse cx="50" cy="25" rx="12" ry="20" fill="url(#sakuraGrad)" transform="rotate(216 50 50)"/>
+  <ellipse cx="50" cy="25" rx="12" ry="20" fill="url(#sakuraGrad)" transform="rotate(288 50 50)"/>
+  <!-- Center -->
+  <circle cx="50" cy="50" r="8" fill="url(#centerGrad)"/>
+  <!-- Petal details -->
+  <path d="M50 30 Q52 35 50 40" stroke="#FF69B4" stroke-width="1" fill="none" opacity="0.5"/>
+  <path d="M65 45 Q60 47 55 45" stroke="#FF69B4" stroke-width="1" fill="none" opacity="0.5" transform="rotate(72 50 50)"/>
+</svg>

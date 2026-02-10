@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Week - A Surprise for Sharon 🌸</title>
+    <!-- Social Preview (Open Graph) -->
+    <meta property="og:title" content="A Surprise for Sharon 🌸">
+    <meta property="og:description" content="I have something special for you... Click to open! 💕">
+    <meta property="og:image" content="https://Deon-07.github.io/ValentineWeek/preview/preview_1.png">
+    <meta property="og:url" content="https://Deon-07.github.io/ValentineWeek">
+    <meta property="og:type" content="website">
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Great+Vibes&family=Montserrat:wght@400;700&family=Playfair+Display:ital,wght@0,400;1,400&family=Outfit:wght@400;700&family=Dancing+Script:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Music Consent Modal (Hidden - using music player instead) -->
+    <div id="musicConsentModal" class="music-modal" style="display: none !important;">
+        <div class="music-modal-content">
+            <h2 style="color: #2D1018; margin-bottom: 15px;">🎵 Enable Music?</h2>
+            <p style="color: #4A1F24;">This experience is best enjoyed with sound.</p>
+            <button class="music-btn" id="musicConsentBtn">Start Experience 💕</button>
+        </div>
+    </div>
+
+    <!-- Background Animation (Floating SVGs) -->
+    <div id="background-animation"></div>
+
+    <!-- Sakura Petals Container (for Coming Soon page) -->
+    <div class="sakura-container" id="sakuraContainer"></div>
+
+    <!-- Navigation Arrows -->
+    <button class="nav-arrow prev" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
+    <button class="nav-arrow next" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
+
+    <!-- Main Container with Stages -->
+    <div class="stages-container" id="stagesContainer">
+
+        <!-- Stage 1: Greeting -->
+        <div class="stage stage-1" id="stage1">
+            <h1 class="greeting-title">Hey <span class="highlight-name">Sharon🌸</span></h1>
+            <p class="greeting-sub">I have something special for you...</p>
+        </div>
+
+        <!-- Stage 2: Day Announcement -->
+        <div class="stage stage-2" id="stage2">
+            <div class="day-announce" id="dayAnnounce">
+                <span class="day-icon" id="stageIcon">🌹</span>
+                <h2 id="stageDayTitle">It's Rose Day!</h2>
+            </div>
+        </div>
+
+        <!-- Stage 3: Typing Effect / Text Box -->
+        <div class="stage stage-3" id="stage3">
+            <div class="text-box-container">
+                <div class="text-box">
+                    <!-- WhatsApp Message Bubble (starts hidden) -->
+                    <p class="typing-text" id="typingText" style="display: none;"></p>
+                    <!-- WhatsApp Input Bar -->
+                    <div class="wa-input-bar">
+                        <div class="wa-input-text placeholder" id="waInputText">Type a message</div>
+                        <div class="fake-send-btn" aria-label="Send">
+                            <svg viewBox="0 0 24 24" width="24" height="24" class="">
+                                <path fill="currentColor"
+                                    d="M1.101 21.757 23.8 12.028 1.101 2.3l.011 7.912 13.623 1.816-13.623 1.817-.011 7.912z">
+                                </path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stage 4: Buildup Ideas with Personal Memories -->
+        <div class="stage stage-4" id="stage4">
+            <p class="idea idea-1">That's what I was going to send...</p>
+            <p class="idea idea-2">But then I stopped.</p>
+            <p class="idea idea-3">I remembered something <strong>special</strong>.</p>
+            <p class="idea idea-4">Remember the <strong>Kash flower</strong> I gifted you? 🌸</p>
+            <p class="idea idea-5">And that <strong>yellow flower</strong> I put on your ears... 🌼</p>
+            <p class="idea idea-6">...when you were feeling sad?</p>
+            <p class="idea idea-7">I'm so sorry that I'm not with you right now... 🥺</p>
+            <p class="idea idea-8">But my heart is always right there beside you.</p>
+            <p class="idea idea-9">Those little moments mean <span class="emphasis">everything</span> to me ✨</p>
+            <p class="idea idea-10">Because you deserve the <span class="emphasis">world</span> 💕</p>
+        </div>
+
+        <!-- Stage 5: Main Reveal (Card) -->
+        <div class="stage stage-5" id="stage5">
+            <div class="reveal-card" id="revealCard">
+                <div class="day-number" id="dayNumber">Day 1</div>
+                <div class="day-badge" id="dayBadge">Feb 7 • Rose Day</div>
+                <div class="subtitle" id="daySubtitle">Where Our Journey Begins...</div>
+
+                <div class="icon-display" id="iconDisplay">
+                    <img src="assets/svgs/heart.svg" class="svg-icon left" alt="heart">
+                    <img src="assets/svgs/heart.svg" class="svg-icon center" alt="heart">
+                    <img src="assets/svgs/heart.svg" class="svg-icon right" alt="heart">
+                </div>
+
+                <div class="quote" id="quoteText">
+                    In a garden of billions,<br>
+                    my heart chose you —<br>
+                    the rarest rose that ever bloomed.
+                </div>
+
+                <div class="name" id="recipientName">— Sharon🌸</div>
+
+                <div class="message" id="dayMessage">
+                    Every love story has a beginning. This rose marks the first chapter of our week together.
+                </div>
+
+                <div class="effect-toggle" id="effectToggle">
+                    <button class="effect-toggle-btn" id="effectToggleBtn" type="button" aria-pressed="false">
+                        ✨ Effects Off
+                    </button>
+                </div>
+
+                <div class="footer" id="footerText">Happy Rose Day • February 7, 2026</div>
+            </div>
+            <div id="dayEffectLayer" aria-hidden="true"></div>
+        </div>
+
+        <!-- Stage 5.5: Proposal Question (Only for Propose Day) -->
+        <div class="stage stage-proposal" id="stageProposal" style="display: none;">
+            <div class="proposal-container">
+                <span class="proposal-icon">💍</span>
+                <h2 class="proposal-question">Do you love me?</h2>
+                <p class="proposal-sub">Be honest... 💕</p>
+                <div class="proposal-buttons">
+                    <button class="proposal-btn yes" id="proposalYes">Yes! 💖</button>
+                    <button class="proposal-btn no" id="proposalNo">No 😢</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Proposal Response -->
+        <div class="stage proposal-response" id="proposalResponse">
+            <span class="response-icon">🎉💖🎉</span>
+            <h2 class="response-text">I knew it!</h2>
+            <p class="response-sub">You just made me the happiest person alive! 💕</p>
+        </div>
+
+        <!-- Stage 5.6: Teddy Gift (Only for Teddy Day) -->
+        <div class="stage stage-teddy" id="stageTeddy" style="display: none;">
+            <div class="teddy-gift-container">
+                <div id="giftWrapper">
+                    <span class="gift-box" id="giftBox">🎁</span>
+                    <p class="tap-hint">Tap the gift to open! 🎀</p>
+                </div>
+                <div class="teddy-reveal" id="teddyReveal">
+                    <span class="teddy-icon">🧸</span>
+                    <h2 class="teddy-message">A Teddy for You!</h2>
+                    <p class="teddy-sub">Hold it tight whenever you miss me 💕</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+
+    <!-- Stage 5.7: Valentine's Proposal (ONLY Feb 14) -->
+    <div class="stage stage-valentine" id="stageValentine"
+        style="display: none; flex-direction: column; align-items: center; justify-content: center; height: 100%;">
+        <div class="valentine-container" style="text-align: center; padding: 40px;">
+            <div style="font-size: 6rem; margin-bottom: 25px; animation: pulse 1.5s ease-in-out infinite;">💝</div>
+            <p style="font-size: 1.3rem; color: #ff6b9d; margin-bottom: 15px; opacity: 0.9;">
+                After 7 beautiful days together...
+            </p>
+            <h1
+                style="color: #d32f2f; font-family: 'Great Vibes', cursive; font-size: 4.5rem; margin-bottom: 15px; text-shadow: 0 2px 20px rgba(255,0,64,0.3);">
+                Will you be my...
+            </h1>
+            <h2 style="font-size: 3rem; color: #ff0040; margin-bottom: 15px; font-weight: bold; letter-spacing: 3px;">
+                Forever Valentine? 💕
+            </h2>
+            <p style="font-size: 1.1rem; color: #888; margin-bottom: 35px; font-style: italic;">
+                (There's only one right answer... 😉)
+            </p>
+            <div class="valentine-buttons" style="display: flex; gap: 20px; justify-content: center;">
+                <button class="valentine-btn v-yes" id="valentineYes"
+                    style="font-size: 1.4rem; padding: 18px 45px;">YES! Forever! ❤️</button>
+                <button class="valentine-btn v-no" id="valentineNo" style="font-size: 1rem; padding: 12px 25px;">Maybe
+                    later? 🙈</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Stage 6: Celebration (Balloons/Fireworks) -->
+    <div class="stage stage-6" id="stage6">
+        <div class="celebration-container" id="celebrationContainer"></div>
+    </div>
+
+    <!-- Stage 7: End Screen / Replay -->
+    <div class="stage stage-7" id="stage7"
+        style="display: none; align-items: center; justify-content: center; flex-direction: column;">
+        <div class="replay-section" id="replaySection">
+            <p
+                style="color: #5c3d4a; font-size: 1.4rem; font-weight: 500; text-shadow: 0 1px 2px rgba(255,255,255,0.5);">
+                Hope you loved this! 💕</p>
+            <button class="replay-btn" id="replayBtn">Watch Again ↺</button>
+        </div>
+    </div>
+    </div>
+
+    <!-- Love Letter Modal -->
+    <div id="letterModal">
+        <div class="letter-content">
+            <span class="letter-close" onclick="closeLoveLetter()">&times;</span>
+            <div id="letterText"></div>
+            <div style="text-align: right; margin-top: 30px; font-family: 'Great Vibes', cursive; font-size: 2rem;">
+                Forever Yours,<br>Chadu
+            </div>
+        </div>
+    </div>
+
+    <!-- Coming Soon Overlay (Added separately to preserve DOM) -->
+    <div id="comingSoonOverlay">
+        <div style="font-size: 5rem; margin-bottom: 30px;">💝</div>
+        <h1 style="font-family: 'Great Vibes', cursive; font-size: 3.5rem; margin-bottom: 20px;">
+            Something Special is Coming...
+        </h1>
+        <p style="font-size: 1.5rem; opacity: 0.9; font-style: italic;">
+            For <span id="csName">Sharon🌸</span>
+        </p>
+
+        <!-- Countdown Timer -->
+        <div id="countdownContainer" style="margin-top: 40px;">
+            <p id="countdownLabel" style="font-size: 1.1rem; opacity: 0.8; margin-bottom: 15px;">Valentine's Week begins
+                in:</p>
+            <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                <div class="countdown-box">
+                    <span id="countDays" class="countdown-num">00</span>
+                    <span class="countdown-label">Days</span>
+                </div>
+                <div class="countdown-box">
+                    <span id="countHours" class="countdown-num">00</span>
+                    <span class="countdown-label">Hours</span>
+                </div>
+                <div class="countdown-box">
+                    <span id="countMins" class="countdown-num">00</span>
+                    <span class="countdown-label">Minutes</span>
+                </div>
+                <div class="countdown-box">
+                    <span id="countSecs" class="countdown-num">00</span>
+                    <span class="countdown-label">Seconds</span>
+                </div>
+            </div>
+        </div>
+
+        <p style="font-size: 1.2rem; margin-top: 30px; opacity: 0.7;">
+            Valentine's Week begins on February 7th 💕
+        </p>
+    </div>
+
+    <div id="customCursor" aria-hidden="true"></div>
+
+    <!-- Day Indicator (Dots) -->
+    <div class="day-indicator" id="dayIndicator"></div>
+
+
+    <!-- Music Player -->
+    <div class="music-player" id="musicPlayer">
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+        <div class="player-icon" id="playPauseBtn">
+            <i class="fas fa-play"></i>
+        </div>
+        <div class="song-info">
+            <div class="song-title">Valentine Vibes 💕</div>
+            <div class="song-artist">Your Love Song</div>
+        </div>
+        <audio id="bgMusic" loop preload="auto">
+            <source src="assets/music/rose-day.mp3" type="audio/mpeg">
+            <source src="https://cdn.pixabay.com/audio/2024/02/14/audio_9770949632.mp3" type="audio/mpeg">
+            <source src="https://cdn.pixabay.com/audio/2022/10/12/audio_be9c28e1db.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

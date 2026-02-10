@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <linearGradient id="branchGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#5D4037"/>
+      <stop offset="100%" style="stop-color:#8D6E63"/>
+    </linearGradient>
+    <linearGradient id="blossomGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFEEF8"/>
+      <stop offset="50%" style="stop-color:#FFB7D5"/>
+      <stop offset="100%" style="stop-color:#FF8DC0"/>
+    </linearGradient>
+    <radialGradient id="cGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#FFE066"/>
+      <stop offset="100%" style="stop-color:#FFCC00"/>
+    </radialGradient>
+  </defs>
+  <!-- Branch -->
+  <path d="M5 80 Q30 60 50 55 Q70 50 95 45" stroke="url(#branchGrad)" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M50 55 Q55 40 60 30" stroke="url(#branchGrad)" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M70 50 Q80 35 85 25" stroke="url(#branchGrad)" stroke-width="2" fill="none" stroke-linecap="round"/>
+  
+  <!-- Flower 1 -->
+  <g transform="translate(30, 60) scale(0.35)">
+    <ellipse cx="50" cy="25" rx="12" ry="18" fill="url(#blossomGrad)" transform="rotate(0 50 50)"/>
+    <ellipse cx="50" cy="25" rx="12" ry="18" fill="url(#blossomGrad)" transform="rotate(72 50 50)"/>
+    <ellipse cx="50" cy="25" rx="12" ry="18" fill="url(#blossomGrad)" transform="rotate(144 50 50)"/>
+    <ellipse cx="50" cy="25" rx="12" ry="18" fill="url(#blossomGrad)" transform="rotate(216 50 50)"/>
+    <ellipse cx="50" cy="25" rx="12" ry="18" fill="url(#blossomGrad)" transform="rotate(288 50 50)"/>
+    <circle cx="50" cy="50" r="6" fill="url(#cGrad)"/>
+  </g>
+  
+  <!-- Flower 2 -->
+  <g transform="translate(55, 45) scale(0.3)">
+    <ellipse cx="50" cy="25" rx="12" ry="18" fill="url(#blossomGrad)" transform="rotate(15 50 50)"/>
+    <ellipse cx="50" cy="25" rx="12" ry="18" fill="url(#blossomGrad)" transform="rotate(87 50 50)"/>
+    <ellipse cx="50" cy="25" rx="12" ry="18" fill="url(#blossomGrad)" transform="rotate(159 50 50)"/>
+    <ellipse cx="50" cy="25" rx="12" ry="18" fill="url(#blossomGrad)" transform="rotate(231 50 50)"/>
+    <ellipse cx="50" cy="25" rx="12" ry="18" fill="url(#blossomGrad)" transform="rotate(303 50 50)"/>
+    <circle cx="50" cy="50" r="6" fill="url(#cGrad)"/>
+  </g>
+  
+  <!-- Flower 3 -->
+  <g transform="translate(60, 22) scale(0.25)">
+    <ellipse cx="50" cy="25" rx="12" ry="18" fill="url(#blossomGrad)" transform="rotate(30 50 50)"/>
+    <ellipse cx="50" cy="25" rx="12" ry="18" fill="url(#blossomGrad)" transform="rotate(102 50 50)"/>
+    <ellipse cx="50" cy="25" rx="12" ry="18" fill="url(#blossomGrad)" transform="rotate(174 50 50)"/>
+    <ellipse cx="50" cy="25" rx="12" ry="18" fill="url(#blossomGrad)" transform="rotate(246 50 50)"/>
+    <ellipse cx="50" cy="25" rx="12" ry="18" fill="url(#blossomGrad)" transform="rotate(318 50 50)"/>
+    <circle cx="50" cy="50" r="6" fill="url(#cGrad)"/>
+  </g>
+  
+  <!-- Flower 4 -->
+  <g transform="translate(80, 35) scale(0.28)">
+    <ellipse cx="50" cy="25" rx="12" ry="18" fill="url(#blossomGrad)" transform="rotate(-10 50 50)"/>
+    <ellipse cx="50" cy="25" rx="12" ry="18" fill="url(#blossomGrad)" transform="rotate(62 50 50)"/>
+    <ellipse cx="50" cy="25" rx="12" ry="18" fill="url(#blossomGrad)" transform="rotate(134 50 50)"/>
+    <ellipse cx="50" cy="25" rx="12" ry="18" fill="url(#blossomGrad)" transform="rotate(206 50 50)"/>
+    <ellipse cx="50" cy="25" rx="12" ry="18" fill="url(#blossomGrad)" transform="rotate(278 50 50)"/>
+    <circle cx="50" cy="50" r="6" fill="url(#cGrad)"/>
+  </g>
+  
+  <!-- Falling petals -->
+  <ellipse cx="15" cy="35" rx="4" ry="7" fill="#FFB7D5" transform="rotate(-30 15 35)" opacity="0.7"/>
+  <ellipse cx="45" cy="15" rx="3" ry="5" fill="#FFEEF8" transform="rotate(20 45 15)" opacity="0.8"/>
+  <ellipse cx="90" cy="70" rx="4" ry="6" fill="#FFB7D5" transform="rotate(-45 90 70)" opacity="0.6"/>
+</svg>
