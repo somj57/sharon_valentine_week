@@ -207,7 +207,7 @@ const config = {
             music: "assets/music/kiss-day.mp3",
             memories: [
                 "A kiss is not just a touch...",
-                "Remember Dec 3?",
+                "Remember July 6?",
                 "It's a promise.",
                 "It's a whisper of love.",
                 "Remember the <strong>spark</strong>?",
